@@ -1,1 +1,10 @@
+# azure-pipelines.yml
+trigger:
+- main
 
+pool:
+  name: WKL-rwbuvlczft6004564  # This must match the name of your self-hosted agent pool
+
+steps:
+- script: echo "hello"
+  displayName: 'Say Hello'
